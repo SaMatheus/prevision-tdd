@@ -16,6 +16,12 @@ Talvez tenha sido muito tooMuch, mas vou explicar qual a linhad e raciocinio que
   no total fopram 12 sucesssos e 12 falhas.
 - No caso das falhas eu dupliquei a função fizzbees e to retornando os valores todos errados pra garantir que os testes estão funcionando
 
+--PS: Acabei demorando um pouco mais do que gostaria devido a um problema com nomenclatura.
+  Aparentemente o Jest não gosta quando existe uma variavel chamada describe, e o Js
+  tava reclamando amda variavel do forEach que estava nomeada como "case".
+  
+
+
 ## Considerações
 - Cara, MUITO OBRIGADO. Você abriu minha mente hoje, vou continuar estudando e lendo aqueles livros que você me mandou, e amanhã mesmo já vou trazer pro meu time
   esse aprendizado, trabalhar com TDD vai melhorar nosso trabalho em 1000%.
