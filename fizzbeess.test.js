@@ -1,102 +1,89 @@
-const fizzbees = (number) => {
-  if (number === 0) return 'Não da pra dividir por 0'
-  if (number % 3 === 0 && number % 5 === 0) return 'fizzbees'
-  if (number % 3 === 0) return 'fizz'
-  if (number % 5 === 0) return 'bees'
-  else return number
-};
-const fizzbeesWrong = (number) => {
-  if (number === 0) return number
-  if (number % 3 === 0 && number % 5 === 0) return number
-  if (number % 3 === 0) return number
-  if (number % 5 === 0) return number
-  else return 'fezzbees'
-};
+const { right, wrong } = require('./fizzbees')
 
 const testCases = [
   {
     description: 'Quando o número é 0',
     successCaseText: 'Retonar "Não da pra dividir por 0"',
-    rightFn: () => expect(fizzbees(0)).toBe('Não da pra dividir por 0'),
+    rightFn: () => expect(right(0)).toBe('Não da pra dividir por 0'),
     failCaseText: 'Não retonar "Não da pra dividir por 0"',
-    wrongtFn: () => expect(fizzbeesWrong(0)).not.toBe('Não da pra dividir por 0')
+    wrongtFn: () => expect(wrong(0)).not.toBe('Não da pra dividir por 0')
   },
   {
     description: 'Quando o número é 1',
     successCaseText: 'Retonar 1',
-    rightFn: () => expect(fizzbees(1)).toBe(1),
+    rightFn: () => expect(right(1)).toBe(1),
     failCaseText: 'Não retonar 1',
-    wrongtFn: () => expect(fizzbeesWrong(1)).not.toBe(1)
+    wrongtFn: () => expect(wrong(1)).not.toBe(1)
   },
   {
     description: 'Quando o número é 29',
     successCaseText: 'Retonar 29',
-    rightFn: () => expect(fizzbees(29)).toBe(29),
+    rightFn: () => expect(right(29)).toBe(29),
     failCaseText: 'Não retonar 29',
-    wrongtFn: () => expect(fizzbeesWrong(29)).not.toBe(29)
+    wrongtFn: () => expect(wrong(29)).not.toBe(29)
   },
   {
     description: 'Quando o número é 12',
     successCaseText: 'Retonar fizz',
-    rightFn: () => expect(fizzbees(12)).toBe('fizz'),
+    rightFn: () => expect(right(12)).toBe('fizz'),
     failCaseText: 'Não retonar fizz',
-    wrongtFn: () => expect(fizzbeesWrong(12)).not.toBe('fizz')
+    wrongtFn: () => expect(wrong(12)).not.toBe('fizz')
   },
   {
     description: 'Quando o número é 15',
     successCaseText: 'Retonar fizzbees',
-    rightFn: () => expect(fizzbees(15)).toBe('fizzbees'),
+    rightFn: () => expect(right(15)).toBe('fizzbees'),
     failCaseText: 'Não retonar fizzbees',
-    wrongtFn: () => expect(fizzbeesWrong(15)).not.toBe('fizzbees')
+    wrongtFn: () => expect(wrong(15)).not.toBe('fizzbees')
   },
   {
     description: 'Quando o número é 18',
     successCaseText: 'Retonar fizz',
-    rightFn: () => expect(fizzbees(18)).toBe('fizz'),
+    rightFn: () => expect(right(18)).toBe('fizz'),
     failCaseText: 'Não retonar fizz',
-    wrongtFn: () => expect(fizzbeesWrong(18)).not.toBe('fizz')
+    wrongtFn: () => expect(wrong(18)).not.toBe('fizz')
   },
   {
     description: 'Quando o número é 20',
     successCaseText: 'Retonar bees',
-    rightFn: () => expect(fizzbees(20)).toBe('bees'),
+    rightFn: () => expect(right(20)).toBe('bees'),
     failCaseText: 'Não retonar bees',
-    wrongtFn: () => expect(fizzbeesWrong(20)).not.toBe('bees')
+    wrongtFn: () => expect(wrong(20)).not.toBe('bees')
   },
   {
     description: 'Quando o número é 21',
     successCaseText: 'Retonar fizz',
-    rightFn: () => expect(fizzbees(21)).toBe('fizz'),
+    rightFn: () => expect(right(21)).toBe('fizz'),
     failCaseText: 'Não retonar fizz',
-    wrongtFn: () => expect(fizzbeesWrong(21)).not.toBe('fizz')
+    wrongtFn: () => expect(wrong(21)).not.toBe('fizz')
   },
   {
     description: 'Quando o número é 24',
     successCaseText: 'Retonar fizz',
-    rightFn: () => expect(fizzbees(24)).toBe('fizz'),
+    rightFn: () => expect(right(24)).toBe('fizz'),
     failCaseText: 'Não retonar fizz',
-    wrongtFn: () => expect(fizzbeesWrong(24)).not.toBe('fizz')
+    wrongtFn: () => expect(wrong(24)).not.toBe('fizz')
   },
   {
     description: 'Quando o número é 25',
     successCaseText: 'Retonar bees',
-    rightFn: () => expect(fizzbees(25)).toBe('bees'),
+    rightFn: () => expect(right(25)).toBe('bees'),
     failCaseText: 'Não retonar bees',
-    wrongtFn: () => expect(fizzbeesWrong(25)).not.toBe('bees')
+    wrongtFn: () => expect(wrong(25)).not.toBe('bees')
   },
   {
     description: 'Quando o número é 27',
     successCaseText: 'Retonar fizz',
-    rightFn: () => expect(fizzbees(27)).toBe('fizz'),
+    rightFn: () => expect(right(27)).toBe('fizz'),
     failCaseText: 'Não retonar fizz',
-    wrongtFn: () => expect(fizzbeesWrong(27)).not.toBe('fizz')
+    wrongtFn: () => expect(wrong(27)).not.toBe('fizz')
   },
   {
     description: 'Quando o número é 66',
     successCaseText: 'Retonar fizz',
-    rightFn: () => expect(fizzbees(66)).toBe('fizz'),
+    rightFn: () => expect(right(66)).toBe('fizz'),
     failCaseText: 'Não retonar fizz',
-    wrongtFn: () => expect(fizzbeesWrong(66)).not.toBe('fizz')
+    wrongtFn: () => expect(wrong(66)).not.toBe('fizz')
   }
 ];
 
